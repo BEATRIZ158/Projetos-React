@@ -2,22 +2,27 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const name = 'Beatriz'
+
+  const newname = name.toUpperCase()
+  
+  // Criando função sum
+  function sum(a, b){
+    return a + b
+  }
+
+  // Alteração de atributos 
+  const url = 'https://via.placeholder.com/150'
+
+  // Elementos JSX precisam estar em algum elemento
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Alterando o JSK</h2>
+      <p>Olá, {name}</p>
+      <p>Olá, {newname}</p>
+      <p>Soma: {sum(1,2)}</p>
+      <img src={url} alt="Minha imagem"></img>
     </div>
   );
 }

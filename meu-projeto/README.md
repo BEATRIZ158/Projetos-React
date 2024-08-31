@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+** Primeiro Projeto de React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Olá! Sejam-bem vindos ao repositório de Projetos React.
+Aqui estão todos os projetos e estudos desenvolvidos com a biblioteca.
 
-## Available Scripts
+Esse é o primeiro projeto que desenvolvo com React, ele está sendo desenvolvido juntamente com o professor Matheus Battisti - Hora de Codar, toda a ideia e planejamento pertencem a ele, apenas estou estudando e reproduzindo.
 
-In the project directory, you can run:
+Vamos começar explicando qual é a função ou importância de cada pasta ou arquivo que foi criado na extrutura do projeto.
 
-### `npm start`
+1. node_modules
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Contém todas as dependências (bibliotecas e pacotes) que o projeto precisa para funcionar. Não precisa alterar nada manualmente!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. public
 
-### `npm test`
+Contém arquivos que são entregues diretamente ao navegador do usuário pelo setvidor web sem passar por nenhum processo de transformação ou processamento adicional pelo React.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Geralmente usada para armazenar recursos estáticos que não mudam, como imagens, o arquivo 'manifest.json' e 'robots.txt'.
 
-### `npm run build`
+- index.html: É o arquivo HTML principal. O React injeta a aplicação aqui. O elemento '<div id="root"></div>' é onde o React renderiza toda a sua aplicação.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- manifest.json: É usado principal para PWA. Ele descreve como o aplicativo deve ser instalado na tela inicial do dispositivo e o comportamento de inicialização.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- robots.txt: Este arquivo informa aos motores de busca quais páginas eles devem ou não rastrear.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. src
 
-### `npm run eject`
+Contem o código-fonte da aplicação React.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- App.css: Contém estilos específicos para o componente 'App'. é possível definir estilso CSS para a aplicação aqui.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- App.js: Este é o componente principal da aplicação. É um componente funcional por padrão, onde é possível começar a adicionar componentes React e Lógica de interface de usuário.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- App.test.js: É usado para testes unitários. Por padrão, o create-react-app inclui um teste simples para verificar se o componente App renderiza sem erros.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- index.css: Contém estilos globais para o seu aplicativo. Estes estilos são aplicados a todos os componentes.
 
-## Learn More
+- index.js: Este é o ponto de entrada para a aplicação. Ele renderiza o componente App dentro do elemento <div id="root"></div> do index.html. É aqui que a árvore de componentes do React começa.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- reportWebVitals.js: Este arquivo é usado para medir e relatar métricas de desempenho do aplicativo (como tempos de carregamento). É opcional.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- setupTests.js: Configurações para o ambiente de testes. É configurado por padrão para usar a biblioteca Jest para testes.
 
-### Code Splitting
+4. .gitignore
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Este arquivo especifica quais arquivos e pastas devem ser ignorados pelo Git, ou seja, arquivos que não devem ser enviados para o repositório de controle de versão (como node_modules, arquivos de configuração locais, etc.).
+ 
+5. package.json
 
-### Analyzing the Bundle Size
+Este é o arquivo de configuração principal para o projeto. Ele inclui metadados sobre o projeto, como o nome, versão, scripts disponíveis (como start, build, test), e uma lista de dependências e devDependencies (bibliotecas necessárias para desenvolvimento).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+6. package-lock.json
 
-### Making a Progressive Web App
+Ele descreve a árvore de dependências exata que foi gerada para garantir que instalações futuras sejam idênticas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Fluxo de Inicialização da Aplicação React
 
-### Advanced Configuration
+1. index.html (pasta public):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ Ele é o contêiner onde toda a sua aplicação React será renderizada.
 
-### Deployment
+ 2. index.js (pasta src):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Ele importa o React, o ReactDOM (para manipulação do DOM), e o componente principal da aplicação (normalmente App).
 
-### `npm run build` fails to minify
+O código típico neste arquivo usa o método ReactDOM.render() para renderizar o componente App dentro do elemento <div id="root"></div> que mencionamos no index.html
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. App.js (pasta 'src'):
+
+O App.js é o componente principal da aplicação React. Ele é o ponto inicial da árvore de componentes da sua aplicação.
+
+No App.js, você pode definir a estrutura e a lógica de sua aplicação, incluindo a renderização de outros componentes. Por exemplo, o App.js pode renderizar um cabeçalho, um menu de navegação, e o conteúdo principal.
+
+4. Outros componentes (arquivos .js adicionais na pasta src):
+
+A partir do App.js, você pode importar e renderizar outros componentes que compõem a aplicação. Por exemplo, Header.js, Footer.js, MainContent.js, etc.
+Esses componentes são chamados de forma hierárquica. O App.js pode renderizar Header.js, que pode renderizar Logo.js, e assim por diante.
+
+Resumo do Fluxo:
+1. index.html: Contém o contêiner <div id="root"></div> onde a aplicação será montada.
+2. index.js: Ponto de entrada JavaScript; importa o App e usa ReactDOM.render() para inserir o componente App no contêiner root do index.html.
+3. App.js: Componente principal que define a estrutura básica da aplicação React. Ele pode importar e renderizar outros componentes.
+4. Outros componentes: Arquivos adicionais que são importados e renderizados no App.js ou em outros componentes, criando a árvore de componentes que forma a interface completa da aplicação.
