@@ -1,0 +1,38 @@
+O que são Componentes?
+
+- Permite Dividr a aplicação em partes;
+- Os Componentes renderizam JSX, assim como App.js (Que é um Componente);
+- Precisamos criar um arquivo de Componente;
+- E importá-lo onde Precisamos utilizar;
+- Normalmente fica em uma pasta chamada Components;
+
+São blocos reutilizáveis de códigos que representam partes da interface
+de usuário (UI). Cada Componente pode ser considerado como uma função que retorna
+um pedaço da interface, geralmente escrito com JSX.
+
+Tipos de Componentes:
+
+Funcionais: Escritos como funções JavaScript.
+
+import React from 'react';
+
+function HelloWorld() {
+  return <h1>Hello, World!</h1>;
+}
+
+export default HelloWorld;
+
+
+De Classe: São escritos como classes ES6 e estendem 'React.Componet'. Eles usam um
+método 'render()' para retornar o JSX.
+
+import React, { Component } from 'react';
+
+class HelloWorld extends Component {
+  render() {
+    return <h1>Hello, World!</h1>;
+  }
+}
+
+export default HelloWorld;
+
