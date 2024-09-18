@@ -9,6 +9,8 @@ O que são Componentes?
 São blocos reutilizáveis de códigos que representam partes da interface
 de usuário (UI). Cada Componente pode ser considerado como uma função que retorna
 um pedaço da interface, geralmente escrito com JSX.
+São funções ou classes que retornam elementos React, os quais definem o que é exibido
+na tela.
 
 Tipos de Componentes:
 

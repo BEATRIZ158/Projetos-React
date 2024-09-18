@@ -1,9 +1,12 @@
+// Componente Central!
 import './App.css';
-import HelloWorld from './components/HelloWorld';
+import SayMyName  from './components/SayMyName';
+import Pessoa from './components/Pessoa';
 
 function App() {
   const name = 'Beatriz'
 
+  // Convertendo os caracteres em MAIUSCULO
   const newname = name.toUpperCase()
   
   // Criando função sum
@@ -15,15 +18,18 @@ function App() {
   const url = 'https://via.placeholder.com/150'
 
   // Elementos JSX precisam estar em algum elemento
-
+  // Inserindo a propriedade que é necessária para o componente via atributo (nome)
   return (
     <div className="App">
-      <h2>Alterando o JSK</h2>
-      <p>Olá, {name}</p>
-      <p>Olá, {newname}</p>
-      <p>Soma: {sum(1,2)}</p>
-      <img src={url} alt="Minha imagem"></img>
-      <HelloWorld/>
+      <SayMyName nome="Beatriz"/>
+      <SayMyName nome="João"/>
+      <SayMyName nome={name}/>
+      <Pessoa
+        nome="Beatriz"
+        foto="https://via.placeholder.com/150"
+        idade="22"
+        profissao="Estudante"
+      />
     </div>
   );
 }

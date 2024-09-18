@@ -1,0 +1,42 @@
+Em React e HTML, um "elemento" é qualquer coisa que faça parte da estrutura de uma página web.
+Exemplos:
+
+Elementos HTML: 
+
+Todos os Componentes são considerados elementos. Isso inclui elementos de bloco, como <div>, <section>, <header>
+e elementos de linha, como <span>,<a>,<strong. Esses são os blocos de contrução de uma página web.
+
+A diferença entre elementos de bloco e elementos de linha (ou inline) está na maneira como eles se comportam em 
+relação ao layout e ao fluxo do documento HTML.
+
+Elementos de Bloco (Block Elements):
+
+- Ocupam toda a largura disponível de seu contêiner, o que significa que sempre começam em uma nova linha.
+- Geralmente são usados para estruturar o layout ou o conteúdo principal da página
+- Definem área grandes da página, como seções, artigos, cabeçalhos, rodapés, parágrafos, listas, entre outros.
+- Podem conter outros elementos de bloco e elementos de linha 
+- Exemplos: <div>, <p>, <h1>-<h6>, <section>, <article>, <header>, <footer>, <ul>, <ol>, <li>.
+
+Elementos de Linha (inline Elements):
+
+- Ocupam apenas o espaço necessário para seu conteúdo e não forçam uma quebra de linha 
+- Faz parte de um fluxo de texto ou de conteúdo,
+- São diretamente relacionados ao formato e disposição do conteúdo dentro de outro elemento.
+- Não podem conter elementos de bloco, mas podem conter outros elementos inline.
+- Ficam alinhados um ao lado do outro dentro de elemento de bloco 
+- Exemplo: <span> (usado para estilizar pequenas porções de texto), <a> (link), <em> (ênfase), <strong> (negrito).
+
+-------------------------------------------------------------------------------------------------------------------
+
+Elementos JSX:
+
+Em React, JSX (JavaScript XML) permite que você escreva elementos HTML diretamente no código JavaScript. JSX gera 
+os mesmos elementos HTML no DOM, mas com a sintaxe familiar do JavaScript.
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+Componentes React:
+
+Um componente React também é considerado um elemento. Quando você cria um componente como Frase, ele pode ser usado 
+como um elemento JSX.

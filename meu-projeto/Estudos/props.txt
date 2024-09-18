@@ -1,0 +1,31 @@
+Props
+
+- As props são valores passados para componentes
+- Podemos deixar os componentes dinâmicos
+- Ou seja, mudando a execução por causa do valor da prop 
+- O valor é passado como um atributo na chamada do componente 
+- E precisa ser resgatado dentro de uma propriedade/argumento
+chamada props na função de definição do componente
+- As props são somente de leitura
+
+São uma maneira de passar dados de um componente pai para um componente 
+filho. Elas permite que os componentes sejam reutilizáveis, recebendo
+valores dinâmicos e comportamentos configuráveis de fora do componente.
+
+Como funcionam as props:
+
+- Passando dados para a componente filho: Quando você define um componente filho dentro 
+de um componente pai, você pode passar dados para ele através de atributos personalizados
+(chamados de props). Esses dados são recebidos no componente filho como um objeto chamado 
+props.
+
+- Acessando props no componente filho: No componente filho, as props são acessadas como um objeto.
+É possível extrair os valores dos props utilizando desestruturação.
+
+- Props são somente leitura: Elas são imutáveis dentro do componente filho. Isso significa que 
+o componente filho não pode modificar o valor de uma prop. Se precisar de valores dinâmicos, é preciso
+usar o estado do componente.
+
+- Passando funções como props: Além de valores como strings e números, é possível também 
+passar funções como props para que o componente filho interaja com o 
+componente pai.
