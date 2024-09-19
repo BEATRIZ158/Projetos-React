@@ -2,6 +2,7 @@
 import './App.css';
 import SayMyName  from './components/SayMyName';
 import Pessoa from './components/Pessoa';
+import Frase from './components/Frase';
 
 function App() {
   const name = 'Beatriz'
@@ -9,18 +10,13 @@ function App() {
   // Convertendo os caracteres em MAIUSCULO
   const newname = name.toUpperCase()
   
-  // Criando função sum
-  function sum(a, b){
-    return a + b
-  }
-
-  // Alteração de atributos 
-  const url = 'https://via.placeholder.com/150'
-
   // Elementos JSX precisam estar em algum elemento
   // Inserindo a propriedade que é necessária para o componente via atributo (nome)
   return (
     <div className="App">
+      <h1>Testando CSS</h1>
+      <Frase/>
+      <Frase/>
       <SayMyName nome="Beatriz"/>
       <SayMyName nome="João"/>
       <SayMyName nome={name}/>
