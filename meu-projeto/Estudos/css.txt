@@ -5,3 +5,31 @@ Porém é possível estilizar a nível de componentes;
 Utilizamos o CSS modules para isso;
 Basta criar um arquivo como: Componente.module.css;
 E chamar este CSS no componente;
+
+1. Estilização com CSS padrão (Global CSS) usando o index.css:
+
+O CSS é aplicado globalmente em toda a aplicação
+As regras de estilo definidos no index.css afetam todos os componentes, sem restrição de escopo
+
+- Criação:
+Quando se cria um projeto React com create-react-app, um arquivo index.css já é gerado automaticamente.
+
+- Importação:
+No arquivo index.js(Que é ponto de entrada do projeto React), você importa o index.css para que os estilos globais sejam aplicados.
+
+import './index.css';
+
+- Aplicação de estilos globalmente:
+Esses estilos serão aplicados automaticamente a todos os elementos da aplicação. Por exemplo, qualquer <h1> criado em qualquer componente 
+terá a cor azul definida no index.css.
+
+2. Estilização por componentes (CSS Modular ou Encapsulada):
+
+A estilização é aplicada de forma isolada para cada componente. Isso garante que os estilos de um componente não interfiram em outros. Uma maneeira
+comum de fazer isso em React é usando CSS Modules.
+
+- Criação de um arquivo CSS por componente:
+É possível criar um arquivo CSS para cada componente. O nome do arquivo geralmente segue o padrão Componente.module.css.
+
+- Importação do arquivo CSS no componente:
+Você importa esse arquivo CSS usando um nome(styles, por exemplo) para referenciar as classes no JSX.
