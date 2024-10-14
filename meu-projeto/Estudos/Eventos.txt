@@ -1,0 +1,107 @@
+Eventos
+
+- Os Eventos de React são os mesmos eventos do DOM;
+- Ou seja, temos eventos para responder a um click;
+- O evento é atrelado a uma tag que irá executá-lo;
+- Geralmente um método é atribuído ao evento;
+- Este método deve ser criado no componente;
+
+O que são?
+
+São ações ou interações que acontecem na página, como um clique em um botão, digitar em um campo de texto, 
+mover o mouse sobre um elemento, entre outros.
+
+Como funcionam os eventos em React?
+
+Os eventos são tratados usando funções chamadas "event handlers".
+Quando um evento acontece, como um clique em um botão, essa função é executada para responder á ação do usuário.
+Exemplo: onClick
+
+Por que usar eventos?
+
+- Tornar a página interativa.
+- Permite que o React saiba quando o usuário fez algo, como enviar um formulário ou clicar em um botão, e então o React pode atualizar o estado da aplicação
+ou executar algum código em resposta.
+- Sem eventos a interface seria estática, sem interação com o usuário.
+
+Explicação simples!
+
+Eventos são "gatilhos" ou "disparos" para que a função associada seja executada. Então, a ação do usuário (como um clique) dispara o evento, e o evento chama 
+a função correspondente.
+
+<button onClick = {nomeFunção}>Clique aqui</button>
+
+Sempre que o botão for clicado, o React dispara o evento onCLick e chama a função nomeFunção. Como resultado, a função é executada, e o alerta com a mensagem 
+'Botão foi clicado!" aparece na tela. Não pode colocar o nome dafunção seguido de um () porque assim, a função seria chamada imediatamente quando o componente 
+fosse renderizado, em vez de ser chamado quando o usuário clicar.
+
+Diferentes tipos de eventos (Ainda não estudei todos!):
+
+    Eventos de Mouse:
+        onClick: Disparado quando o usuário clica em um elemento.
+        onDoubleClick: Disparado quando o usuário dá um clique duplo em um elemento.
+        onMouseEnter: Disparado quando o ponteiro do mouse entra na área de um elemento.
+        onMouseLeave: Disparado quando o ponteiro do mouse sai da área de um elemento.
+        onMouseDown: Disparado quando o botão do mouse é pressionado.
+        onMouseUp: Disparado quando o botão do mouse é solto.
+
+    Eventos de Teclado:
+        onKeyDown: Disparado quando uma tecla é pressionada.
+        onKeyUp: Disparado quando uma tecla é liberada.
+        onKeyPress: Disparado quando uma tecla é pressionada (mas foi depreciado em favor de onKeyDown).
+
+    Eventos de Formulário:
+        onChange: Disparado quando o valor de um campo de formulário (como um campo de texto) muda.
+        onSubmit: Disparado quando um formulário é enviado.
+        onInput: Disparado quando o valor de um campo de entrada é alterado, semelhante ao onChange.
+
+    Eventos de Foco:
+        onFocus: Disparado quando um elemento recebe foco, como quando o usuário clica ou navega até um campo de texto.
+        onBlur: Disparado quando um elemento perde o foco.
+
+    Eventos de Tela:
+        onScroll: Disparado quando o usuário rola a página ou um elemento com barra de rolagem.
+        onResize: Disparado quando a janela do navegador é redimensionada (normalmente mais usado com componentes controlados pela janela).
+
+    Eventos de Toque (para dispositivos móveis):
+        onTouchStart: Disparado quando o usuário toca na tela.
+        onTouchMove: Disparado quando o usuário move o dedo na tela enquanto está tocando.
+        onTouchEnd: Disparado quando o toque na tela termina.
+
+Código do Evento.js:
+
+function Evento(){
+
+    function meuEvento(){
+        console.log("Opa, fui ativado")
+    }
+
+    return(
+        <div>
+            <p>Clique para disparar o evento:</p>
+            <button onClick={meuEvento}>Ativar</button>
+        </div>
+    )
+}
+
+export default Evento
+
+Explicação:
+
+O código começa com a criação de uma função chamada Evento, que é na verdade um componente funcional. Em React, funções que retornam JSX são componentes, 
+e o Evento é um exemplo de um componente que será renderizado na interface.
+
+A função meuEvento é uma função simples que é chamada quando o evento onClick é disparado. A função usa console.log("Opa, fui ativado"), que não exibe a 
+mensagem diretamente na tela, mas sim no console do navegador. Isso é útil para depuração (debugging), pois permite que os desenvolvedores vejam o que 
+está acontecendo no código enquanto o inspecionam no navegador.
+
+O return dentro da função Evento retorna o JSX, que é a estrutura de elementos HTML que será renderizada na página. JSX é uma extensão de sintaxe para o
+JavaScript que o React usa para descrever como a interface será exibida.
+
+A <div> é um contêiner, e como você disse, ela aloca os outros elementos dentro dela. Ela é uma tag HTML usada para agrupar outros elementos.
+
+O parágrafo <p> contém um texto que será renderizado na página.
+
+O botão contém o evento onClick, que está associado à função meuEvento. Quando o botão é clicado, o evento é disparado, e a função meuEvento é executada,
+resultando na exibição da mensagem "Opa, fui ativado" no console do navegador (não diretamente na tela).
+

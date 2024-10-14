@@ -29,3 +29,34 @@ usar o estado do componente.
 - Passando funções como props: Além de valores como strings e números, é possível também 
 passar funções como props para que o componente filho interaja com o 
 componente pai.
+
+Avançando em props
+
+- Podemos definir tipos para as props, realizando uma espécie de validação
+- Definimos em um objeto chamado prpTypes no próprio componente;
+- E ainda há a possibilidade de definir um valor padrão;
+- Neste caso uitlizaremos o objeto defaultProps;
+
+Passando valores separados como props
+
+Function:
+
+function Item({marca = 'Faltou a marca', ano_lancamento = 0}){
+    return(
+        <>
+        <li>
+            {marca} - {ano_lancamento}
+        </li>
+        </>
+    )
+}
+
+Preciso desestruturar os valores usando {} para que o React entenda que eles fazem parte de um único objeto chamado props
+Quando o Item é usado em outro componente, e passa os valores marca e ano_lancamento
+o React automaticamente agrupa esses valores dentro de um objeto chamado props,
+que é passadod para o componente isso gera um objeto com as props assim: 
+
+props = {
+    marca: 'Ferrari',
+    ano_lancamento: 1943
+};
