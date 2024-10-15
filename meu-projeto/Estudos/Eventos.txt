@@ -105,3 +105,51 @@ O parágrafo <p> contém um texto que será renderizado na página.
 O botão contém o evento onClick, que está associado à função meuEvento. Quando o botão é clicado, o evento é disparado, e a função meuEvento é executada,
 resultando na exibição da mensagem "Opa, fui ativado" no console do navegador (não diretamente na tela).
 
+Código do Form.js:
+
+function Form(){
+    function cadastrarUsuario(e){
+        e.preventDefault()
+        console.log("Cadastrou o usuário")
+    }
+
+    return(
+        <div>
+            <h1>Meu Cadastro!</h1>
+            <form onSubmit={cadastrarUsuario}>
+                <div>
+                    <input type="text" plaholder="Digite o seu nome"/>
+                </div>
+                <div>
+                    <input type="submit" value="Cadastrar"/>
+                </div>
+            </form>
+        </div>
+    )
+}
+
+export default Form
+
+Explicação:
+
+Criando um componente funcional chamado Form. Em React, componentes funcionais são usados para definir pedaços da interface que podem ser reutilizados.
+
+function cadastrarUsuario(e):
+    É a função que será chamada quando o formulário for enviado. O argumento e é o evento de submissão (submission event). O nome e é apenas uma convenção, você pode chamar esse argumento de qualquer coisa, mas e é comumente usado para se referir ao evento.
+
+e.preventDefault():
+    O e.preventDefault() é um método que impede o comportamento padrão de um formulário, que normalmente seria enviar os dados para o back-end e recarregar a página. Quando você chama esse método, a página não será recarregada e o evento permanecerá no front-end, permitindo que você trate os dados do formulário sem enviá-los para o servidor imediatamente.
+    É isso que permite que você, como desenvolvedora, processe ou valide os dados no front-end primeiro, antes de enviar para o back-end.
+
+return(...):
+    O return define o JSX (que é a estrutura da interface) que será renderizado quando o componente for usado. Aqui você está retornando um contêiner <div> com um título (<h1>Meu Cadastro!) e um formulário (<form>).
+
+<form onSubmit={cadastrarUsuario}>:
+    A tag <form> contém o atributo onSubmit, que recebe a função cadastrarUsuario como um evento de submissão. Quando o usuário clica no botão de envio do formulário (<input type="submit" />), o evento onSubmit é disparado, e a função cadastrarUsuario é executada.
+
+Campos do formulário:
+    <input type="text" placeholder="Digite o seu nome" />: 
+    Este campo de entrada (input) é do tipo texto, e o atributo placeholder exibe uma dica para o usuário digitar o nome. Este campo não está vinculado a um estado ainda, mas é possível vincular o valor dele ao estado do componente para capturar o nome digitado, por exemplo.
+
+    <input type="submit" value="Cadastrar" />: 
+    Esse é o botão que envia o formulário. Quando o botão é clicado, ele dispara o evento onSubmit, que faz com que a função cadastrarUsuario seja chamada.
